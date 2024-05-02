@@ -1,0 +1,39 @@
+---
+import { SERVICES_DATA } from '@/lib/services-data'
+import ServicesCard from './ServicesCard.astro'
+---
+
+<section>
+  <h1>Our Services</h1>
+  <p>
+    we feel very strong about our skills when it comes to planning, designing
+    and coding applications. Here is what we love to do!
+  </p>
+  <div>
+    {SERVICES_DATA.map((item) => <ServicesCard {...item} />)}
+  </div>
+</section>
+<style>
+  section {
+    min-height: 50dvh;
+    padding-inline: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  h1 {
+    color: var(--text-color-primary);
+    font-weight: 500;
+  }
+  p {
+    max-width: 65%;
+    text-align: center;
+    color: var(--text-color-secondary);
+    font-weight: 500;
+  }
+  div {
+    display: flex;
+    column-gap: 20px;
+  }
+</style>

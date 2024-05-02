@@ -1,0 +1,22 @@
+---
+const data = Astro.props
+---
+
+<article>
+  <data.icon />
+  <h2>{data?.title}</h2>
+  <p>{data?.text}</p>
+  <button class='btn btn-default'>Learn more</button>
+</article>
+<style>
+  article {
+    background: var(--bg-color-primary);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    font-size: medium;
+  }
+</style>

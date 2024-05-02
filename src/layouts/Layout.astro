@@ -1,0 +1,44 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link
+      href='https://api.fontshare.com/v2/css?f[]=montserrat@300,400,500,600,700,800,900&display=swap'
+      rel='stylesheet'
+    />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style>
+  :root {
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #9399a2;
+    --bg-color-primary: #ffffff;
+    --bg-color-secondary: #3871ff;
+  }
+  body {
+    background-color: #283345;
+    background-image: url('/assets/hero-bg.avif');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>
