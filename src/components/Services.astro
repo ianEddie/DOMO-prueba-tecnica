@@ -1,5 +1,5 @@
 ---
-import { SERVICES_DATA } from '@/lib/services-data'
+import { SERVICES_DATA } from '@/constants/services-data'
 import ServicesCard from './ServicesCard.astro'
 ---
 
@@ -12,15 +12,27 @@ import ServicesCard from './ServicesCard.astro'
   <div>
     {SERVICES_DATA.map((item) => <ServicesCard {...item} />)}
   </div>
+  <div class='bg'>.</div>
 </section>
 <style>
   section {
+    position: relative;
     min-height: 50dvh;
     padding-inline: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
+  }
+  .bg {
+    width: 100%;
+    color: transparent;
+    pointer-events: none;
+    z-index: -10;
+    bottom: 0%;
+    height: 10%;
+    position: absolute;
+    background-color: var(--bg-color-secondary);
   }
   h1 {
     color: var(--text-color-primary);

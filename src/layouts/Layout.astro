@@ -30,11 +30,14 @@ const { title } = Astro.props
   :root {
     --text-color-primary: #ffffff;
     --text-color-secondary: #9399a2;
+    --text-color-tertiary: #737373;
+    --text-color-quaternary: #9bb8ff;
     --bg-color-primary: #ffffff;
     --bg-color-secondary: #3871ff;
+    --bg-color-tertiary: #283345;
   }
   body {
-    background-color: #283345;
+    background-color: var(--bg-color-tertiary);
     background-image: url('/assets/hero-bg.avif');
     background-size: 40%;
     background-repeat: no-repeat;

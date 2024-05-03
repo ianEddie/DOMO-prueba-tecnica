@@ -1,0 +1,59 @@
+---
+import { TECHNOLOGY_DATA } from '@/constants/technoligy-data'
+---
+
+<section>
+  <article class='article-1'>
+    <h1>We use cutting edge technology</h1>
+    <p>
+      Nullam id dolor nibh ultricies vehicula ut id elit. Aenean lacinia
+      bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis
+      parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a
+      pharetra augue. Vestibulum id ligua porta felis euismod semper. Vivamus
+      sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+    </p>
+  </article>
+  <article class='article-2'>
+    {TECHNOLOGY_DATA.map((item) => <item.icon />)}
+  </article>
+</section>
+<style>
+  section {
+    min-height: 50dvh;
+    width: full;
+    background-color: var(--bg-color-secondary);
+    display: flex;
+    padding-inline: 200px;
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+  h1 {
+    color: var(--text-color-primary);
+    font-weight: 500;
+    font-size: 1.7em;
+    font-weight: 500;
+  }
+  p {
+    color: var(--text-color-quaternary);
+    font-weight: 500;
+    max-width: 75%;
+    font-size: 15px;
+    text-wrap: balance;
+  }
+  .article-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 15px;
+    width: 70%;
+  }
+  .article-2 {
+    flex-grow: 1;
+    display: grid;
+    padding-inline: 40px;
+    row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+</style>

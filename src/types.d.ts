@@ -5,3 +5,9 @@ export interface Service {
   text: string
 }
 export type Services = Service[]
+
+export interface Technolgy {
+  icon: any
+  alt: string
+}
+export type Technolgies = Technolgy[]

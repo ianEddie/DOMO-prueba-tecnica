@@ -1,0 +1,56 @@
+<article>
+  <h2>Our Projects</h2>
+  <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  <button class='btn btn-default'>See Projects</button>
+  <picture>
+    <img src='/assets/phone.webp' alt='' />
+  </picture>
+</article>
+<style>
+  article {
+    width: 50%;
+    background-color: var(--bg-color-secondary);
+    display: flex;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 25px;
+    z-index: 0;
+    row-gap: 10px;
+  }
+  picture {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    justify-content: end;
+    align-items: end;
+    flex-grow: 1;
+    padding-right: 20px;
+  }
+  img {
+    height: 90%;
+    width: 90%;
+  }
+  h2 {
+    color: var(--text-color-primary);
+    font-size: 25px;
+    font-weight: 500;
+  }
+  p {
+    color: var(--text-color-primary);
+    filter: opacity(80%);
+    max-width: 60%;
+    font-size: 13px;
+    text-wrap: pretty;
+  }
+  button {
+    color: var(--text-color-primary);
+    border-radius: 0;
+    border-color: var(--text-color-primary);
+    padding-inline: 20px;
+  }
+</style>
