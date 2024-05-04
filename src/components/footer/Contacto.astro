@@ -1,0 +1,55 @@
+---
+import { CONTACTO } from '@/constants/contacto-data'
+import animation from '@/animations/hover-scale.module.css'
+---
+
+<section>
+  <h2>Informacion de contacto</h2>
+  <nav>
+    {
+      CONTACTO.map((item) => (
+        <a class={animation.hoverScale} href={item.value} target='_blank'>
+          <item.icon />
+        </a>
+      ))
+    }
+  </nav>
+</section>
+<style>
+  section {
+    padding-inline: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding-bottom: 15px;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color-primary);
+  }
+  span {
+    color: #d6d3d1;
+  }
+  @media screen and (max-width: 600px) {
+    section {
+      padding-inline: 50px;
+      width: 100%;
+      align-items: center;
+      padding-bottom: 25px;
+    }
+    nav {
+      justify-content: center;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
+</style>

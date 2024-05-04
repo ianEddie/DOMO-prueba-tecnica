@@ -3,7 +3,7 @@ import { CLIENTS_SPONSORS } from '@/constants/clients-data'
 import ClientsCards from './ClientsCards.astro'
 ---
 
-<section>
+<section id="clients">
   <h1>Clients we worked with</h1>
   <article class='article-1'>
     {
@@ -51,5 +51,21 @@ import ClientsCards from './ClientsCards.astro'
     position: absolute;
     bottom: 0;
     z-index: 0;
+  }
+  @media screen and (max-width: 992px) {
+    section {
+      padding-inline: 25px;
+      padding-top: 50px;
+      row-gap: 10px;
+    }
+    .end-color {
+      height: 10%;
+    }
+    .article-1 {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      column-gap: 30px;
+    }
   }
 </style>

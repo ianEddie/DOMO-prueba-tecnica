@@ -1,18 +1,18 @@
-<section>
+<section id="home">
   <h1>We build beatifull and reliable web solutions</h1>
   <p>
     We strongly believe that communication, trust and transparency are the
     essential elements of successful business relationship. Ready for the
     journey?
   </p>
-  <article class=''>
+  <article>
     <button class='btn btn-default'>Learn more</button>
     <button class='btn btn-primary'>Our Projects</button>
   </article>
 </section>
 <style>
   section {
-    height: 100dvh;
+    min-height: 100dvh;
     padding-inline: 200px;
     display: flex;
     flex-direction: column;
@@ -38,9 +38,32 @@
   }
   article > button:first-child {
     color: var(--text-color-secondary);
+    border: 1px solid var(--text-color-secondary);
   }
   button {
     border-radius: 0px;
     padding-inline: 30px;
+  }
+  @media screen and (max-width: 900px) {
+    section {
+      min-height: 70dvh;
+      padding-inline: 50px;
+      justify-content: center;
+      row-gap: 20px;
+    }
+    h1 {
+      max-width: 80%;
+      font-size: 25px;
+    }
+    p {
+      max-width: 100%;
+      font-size: 14px;
+    }
+    article {
+      max-width: 100%;
+    }
+    button {
+      padding-inline: 10px;
+    }
   }
 </style>

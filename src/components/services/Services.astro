@@ -3,7 +3,7 @@ import { SERVICES_DATA } from '@/constants/services-data'
 import ServicesCard from './ServicesCard.astro'
 ---
 
-<section>
+<section id="services">
   <h1>Our Services</h1>
   <p>
     we feel very strong about our skills when it comes to planning, designing
@@ -12,7 +12,7 @@ import ServicesCard from './ServicesCard.astro'
   <div>
     {SERVICES_DATA.map((item) => <ServicesCard {...item} />)}
   </div>
-  <div class='bg'>.</div>
+  <div class='end-bg'>.</div>
 </section>
 <style>
   section {
@@ -24,7 +24,7 @@ import ServicesCard from './ServicesCard.astro'
     align-items: center;
     row-gap: 10px;
   }
-  .bg {
+  .end-bg {
     width: 100%;
     color: transparent;
     pointer-events: none;
@@ -47,5 +47,21 @@ import ServicesCard from './ServicesCard.astro'
   div {
     display: flex;
     column-gap: 20px;
+    row-gap: 20px;
+  }
+  @media screen and (max-width: 900px) {
+    section {
+      padding-inline: 50px;
+    }
+    div {
+      flex-wrap: wrap;
+    }
+    p {
+      max-width: 100%;
+      text-wrap: pretty;
+    }
+    .end-bg {
+      height: 5%;
+    }
   }
 </style>

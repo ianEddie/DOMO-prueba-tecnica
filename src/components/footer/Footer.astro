@@ -5,7 +5,7 @@ import FooterSitemap from './FooterSitemap.astro'
 import FooterContact from './FooterContact.astro'
 ---
 
-<footer>
+<footer id="footer">
   <FooterDescription />
   <aside>
     <FooterSitemap />
@@ -18,13 +18,14 @@ import FooterContact from './FooterContact.astro'
     background-color: var(--bg-color-tertiary);
     padding-inline: 200px;
     display: flex;
-    align-items: start;
+    flex-wrap: wrap;
     padding-top: 80px;
     padding-bottom: 50px;
     column-gap: 20px;
+    row-gap: 20px;
   }
   aside {
-    width: 50%;
+    flex-grow: 1;
     min-height: 30dvh;
     display: flex;
     justify-content: space-between;
@@ -52,5 +53,15 @@ import FooterContact from './FooterContact.astro'
   }
   .nav-title {
     font-size: 13px;
+  }
+  @media screen and (max-width: 992px) {
+    footer {
+      padding-inline: 50px;
+      padding-top: 70px;
+      padding-bottom: 0px;
+    }
+    aside {
+      width: 100%;
+    }
   }
 </style>

@@ -1,5 +1,6 @@
 ---
 import { FOOTER_ICONS } from '@/constants/footer-icons.ts'
+import animation from '@/animations/hover-scale.module.css'
 ---
 
 <article>
@@ -11,17 +12,17 @@ import { FOOTER_ICONS } from '@/constants/footer-icons.ts'
   <nav>
     {
       FOOTER_ICONS.map((item) => (
-        <a>
+        <span class={animation.hoverScale}>
           <item.icon />
-        </a>
+        </span>
       ))
     }
   </nav>
 </article>
 <style>
   article {
-    width: 50%;
     min-height: 30dvh;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,5 +45,15 @@ import { FOOTER_ICONS } from '@/constants/footer-icons.ts'
     align-items: center;
     column-gap: 20px;
     color: var(--text-color-secondary);
+  }
+  @media screen and (max-width: 992px) {
+    article {
+      width: 100%;
+      justify-content: start;
+      row-gap: 20px;
+    }
+    p {
+      max-width: 90%;
+    }
   }
 </style>

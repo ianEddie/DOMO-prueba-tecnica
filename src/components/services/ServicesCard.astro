@@ -12,11 +12,11 @@ const data = Astro.props
   article {
     background: var(--bg-color-primary);
     display: flex;
-    padding-block: 30px;
-    padding-inline: 30px;
+    padding: 30px;
     row-gap: 10px;
     flex-direction: column;
     align-items: center;
+    border-radius: 0.3em;
   }
   h2 {
     font-size: medium;
@@ -34,5 +34,10 @@ const data = Astro.props
     border-color: var(--text-color-secondary);
     border-radius: 0%;
     padding-inline: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    article {
+      padding: 20px;
+    }
   }
 </style>

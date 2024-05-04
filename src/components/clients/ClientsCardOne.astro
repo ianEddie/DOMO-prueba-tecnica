@@ -6,7 +6,6 @@
 <style>
   article {
     background-color: var(--bg-color-secondary);
-    width: 50%;
     padding-inline: 20px;
     padding-block: 40px;
     display: flex;
@@ -32,5 +31,10 @@
     border-radius: 0;
     border-color: var(--text-color-primary);
     padding-inline: 20px;
+  }
+  @media screen and (max-width: 992px){
+    article{
+      width: 100%;
+    }
   }
 </style>

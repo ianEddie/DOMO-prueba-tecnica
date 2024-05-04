@@ -1,0 +1,9 @@
+.hoverScale {
+  cursor: pointer;
+  transition: all;
+  transition: transform 0.3s ease;
+}
+.hoverScale:hover {
+  transform: scaleY(1.1);
+  transform: translateY(-2px);
+}
