@@ -1,0 +1,56 @@
+---
+import FooterCaseStudies from './FooterCaseStudies.astro'
+import FooterDescription from './FooterDescription.astro'
+import FooterSitemap from './FooterSitemap.astro'
+import FooterContact from './FooterContact.astro'
+---
+
+<footer>
+  <FooterDescription />
+  <aside>
+    <FooterSitemap />
+    <FooterCaseStudies />
+    <FooterContact />
+  </aside>
+</footer>
+<style is:global>
+  footer {
+    background-color: var(--bg-color-tertiary);
+    padding-inline: 200px;
+    display: flex;
+    align-items: start;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    column-gap: 20px;
+  }
+  aside {
+    width: 50%;
+    min-height: 30dvh;
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    color: var(--text-color-primary);
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .nav-container {
+    text-align: start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+  }
+  .nav {
+    color: var(--text-color-secondary);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-content: start;
+    padding-top: 15px;
+    row-gap: 15px;
+  }
+  .nav-title {
+    font-size: 13px;
+  }
+</style>

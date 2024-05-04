@@ -20,11 +20,11 @@ import { FOOTER_ICONS } from '@/constants/footer-icons.ts'
 </article>
 <style>
   article {
-    background-color: blueviolet;
     width: 50%;
+    min-height: 30dvh;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    justify-content: space-between;
   }
   h2 {
     color: var(--text-color-primary);
@@ -33,15 +33,16 @@ import { FOOTER_ICONS } from '@/constants/footer-icons.ts'
   }
   p {
     color: var(--text-color-secondary);
-    max-width: 90%;
+    max-width: 75%;
     text-wrap: pretty;
     font-weight: 500;
+    font-size: 14px;
   }
   nav {
     width: 100%;
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    column-gap: 20px;
     color: var(--text-color-secondary);
   }
 </style>

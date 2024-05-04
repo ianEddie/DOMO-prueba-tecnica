@@ -1,0 +1,10 @@
+---
+import { CASE_STUDIES } from '@/constants/case-studies-data'
+---
+
+<div class='nav-container'>
+  <h3 class="nav-title">Case Studies</h3>
+  <nav class='nav'>
+    {CASE_STUDIES.map(({ name }) => <span>{name}</span>)}
+  </nav>
+</div>

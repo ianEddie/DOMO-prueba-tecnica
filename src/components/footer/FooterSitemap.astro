@@ -1,0 +1,10 @@
+---
+import { SITEMAP } from '@/constants/sitemap-data'
+---
+
+<div class='nav-container'>
+  <h3 class='nav-title'>Sitemap</h3>
+  <nav class='nav'>
+    {SITEMAP.map(({ name }) => <a>{name}</a>)}
+  </nav>
+</div>
