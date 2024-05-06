@@ -6,8 +6,4 @@ export interface Service {
 }
 export type Services = Service[]
 
-export interface Technolgy {
-  icon: any
-  alt: string
-}
-export type Technolgies = Technolgy[]
+

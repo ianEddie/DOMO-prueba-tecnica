@@ -3,6 +3,14 @@ import LinkeinIcon from '@/icons/linkedin-icon.astro'
 import TelephoneIcon from '@/icons/telephone-icon.astro'
 import WhatsappIcon from '@/icons/whatsapp-icon.astro'
 import WebIcon from '@/icons/web-icon.astro'
+import type { JSX } from 'astro/jsx-runtime'
+
+interface Contact {
+  icon: (props: any) => JSX.Element
+  value: string
+  name: string
+}
+type ContactData = Contact[]
 
 export const CONTACTO = [
   {

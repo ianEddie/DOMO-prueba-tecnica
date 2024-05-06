@@ -4,7 +4,13 @@ import SassIcon from '@/icons/sass-icon.astro'
 import JsIcon from '@/icons/js-icon.astro'
 import AngularIcon from '@/icons/angular-icon.astro'
 import PythonIcon from '@/icons/python-icon.astro'
-import type { Technolgies } from '@/types'
+import type { JSX } from 'astro/jsx-runtime'
+
+interface Technology {
+  icon: (props: any) => JSX.Element
+  alt: string
+}
+type Technolgies = Technology[]
 
 export const TECHNOLOGY_DATA: Technolgies = [
   {

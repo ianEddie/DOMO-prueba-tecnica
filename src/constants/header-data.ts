@@ -1,4 +1,11 @@
-export const HEADER_DATA = [
+interface HeaderElement {
+  name: string
+  value: string
+  color: string
+}
+type Header = HeaderElement[]
+
+export const HEADER_DATA: Header = [
   {
     name: 'Home',
     value: '#home',

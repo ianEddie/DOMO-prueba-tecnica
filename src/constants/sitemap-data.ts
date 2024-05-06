@@ -1,4 +1,6 @@
-export const SITEMAP = [
+type Sitemap = { name: string }[]
+
+export const SITEMAP: Sitemap = [
   {
     name: 'Home'
   },
