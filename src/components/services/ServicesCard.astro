@@ -1,8 +1,10 @@
 ---
+import animation from '@/animations/reveal.module.css'
+
 const data = Astro.props
 ---
 
-<article>
+<article class={animation.reveal}>
   <data.icon />
   <h2>{data?.title}</h2>
   <p>{data?.text}</p>
